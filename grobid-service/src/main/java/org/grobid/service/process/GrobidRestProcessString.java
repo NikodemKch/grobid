@@ -274,7 +274,7 @@ public class GrobidRestProcessString {
 				response = Response.status(Status.NO_CONTENT).build();
 			} else {
 				response = Response.status(Status.OK)
-                            .entity(biblioItem.toTEI(-1))
+                            .entity(biblioItem.toBibTeX("-1"))
                             .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_XML + "; charset=UTF-8")
                             .header("Access-Control-Allow-Origin", "*")
                             .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
